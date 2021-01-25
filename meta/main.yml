@@ -1,0 +1,18 @@
+---
+dependencies: []                                                                
+                                                                                
+galaxy_info:
+  role_name: openbsd_newsyslog
+  author: "Tristan Le Guern"
+  description: "OpenBSD newsyslog"
+  company: "Gwern"
+  license: "ISC"
+  min_ansible_version: 2.4
+  platforms:
+    - name: OpenBSD
+      versions:
+        - "6.8"
+  galaxy_tags:
+    - syslog
+    - logrotate
+    - newsyslog

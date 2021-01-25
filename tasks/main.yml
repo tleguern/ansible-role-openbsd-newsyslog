@@ -1,0 +1,8 @@
+---
+- name: Ensure newsyslog is configured.
+  template:
+    src: newsyslog.conf.j2
+    dest: /etc/newsyslog.conf
+    owner: root
+    group: wheel
+    mode: 0644

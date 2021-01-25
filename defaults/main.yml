@@ -1,0 +1,4 @@
+---
+# newsyslog_config: |
+#   ...
+newsyslog_extra_rules: []
