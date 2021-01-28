@@ -16,6 +16,6 @@
 /var/www/logs/access.log		644  4     *    $W0   Z "pkill -USR1 -u root -U root -x httpd"
 /var/www/logs/error.log			644  7     250  *     Z "pkill -USR1 -u root -U root -x httpd"
 {% for rule in newsyslog_extra_rules %}
-{{ rule.name | mandatory }} {{ rule.owner | mandatory }}:{{ rule.group | mandatory }} {{ rule.mode | mandatory }} {{ rule.count | mandatory }} {{ rule.size | default('*') }} {{ rule.when | default('*') }} {{ rule.flags | default('Z') }} {{ rule.command if rule.command is defined else "" }}
+{{ rule | newsyslog }}
 {% endfor %}
 {% endif %}
