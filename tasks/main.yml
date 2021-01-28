@@ -1,4 +1,8 @@
 ---
+- assert:
+    that:
+      - (newsyslog_extra_rules == [] and newsyslog_config is defined) or (newsyslog_extra_rules != [] and newsyslog_config is not defined)
+
 - name: Ensure newsyslog is configured.
   template:
     src: newsyslog.conf.j2
