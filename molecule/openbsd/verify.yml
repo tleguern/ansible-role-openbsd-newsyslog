@@ -1,0 +1,48 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  become: yes
+  become_user: root
+  become_method: doas
+  tasks:
+    - name: Write garbage in /tmp/garbage
+      copy:
+        dest: /tmp/garbage
+        content: |
+          Vous le savez, autrefois, quand j'étois près de vous, je me plaisois
+          dans la vie contemplative; le bruit du vent et des vagues de la mer,
+          qu'on entendoit souvent dans notre demeure, me faisoit éprouver les
+          sensations les plus douces; je rêvois l'avenir, en écoutant ces bruits
+          harmonieux, et, confondant les espérances de la jeunesse avec celles
+          d'un autre monde, je me perdois délicieusement dans toutes les chances
+          de bonheur que m'offroit le temps, sous mille formes différentes. Cet
+          été même, quand je n'avois plus à attendre que des peines, vingt fois,
+          au milieu de la nuit, me promenant dans le jardin de l'abbaye, je
+          regardois les Alpes et le ciel, je me retraçois les écrits sublimes
+          qui, dès mon enfance, ont consacré ma vie au culte de tout ce qui est
+          grand et bon: les chants d'Ossian, les hymnes de Thompson à la nature
+          et à son Créateur, toute cette poésie de l'âme qui lui fait pressentir
+          un secret, un mystère, un avenir, dans le silence du ciel et dans la
+          beauté de la terre; le merveilleux de l'imagination, enfin, m'élevoit
+          quelquefois dans la solitude au-dessus de la douleur même; je me
+          rappelois alors la destinée de tout ce qui a été distingué dans le
+          monde, et je n'y voyois que des malheurs. Amour, vertu, génie, tout ce
+          qui a honoré l'homme, l'homme l'a persécuté. Pourquoi donc, me
+          disois-je, serois-je révoltée de mon sort? quand j'ai osé sentir,
+          penser, aimer, ne me suis-je pas condamnée à souffrir! Et je levois
+          des regards plus fiers vers ces astres, qui ont recueilli toutes les
+          idées, toutes les affections que les vulgaires habitans de ce monde
+          ont repoussées. Cette disposition de mon coeur m'étoit assez douce,
+          elle m'aidoit à supporter le nouvel état que j'ai embrassé; mais
+          depuis la mort de M. de Valorbe, je ne sais quelle inquiétude, quel
+          sentiment amer ne me permet plus d'être bien quand je suis seule. 
+    - name: Run newsyslog
+      command: newsyslog
+    - name: Verify if /tmp/garbage.0.gz exists
+      stat:
+        path: /tmp/garbage.0.gz
+      register: st
+    - assert:
+        that:
+          - st.stat.exists
