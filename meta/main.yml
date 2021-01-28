@@ -2,7 +2,7 @@
 dependencies: []                                                                
                                                                                 
 galaxy_info:
-  role_name: openbsd_newsyslog
+  role_name: newsyslog
   author: "Tristan Le Guern"
   description: "OpenBSD newsyslog"
   company: "Gwern"
