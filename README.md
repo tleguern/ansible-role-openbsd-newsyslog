@@ -4,7 +4,7 @@
 
 Ansible role for OpenBSD's newsyslog, an equivalent to logrotate.
 
-Automatic testing is provided using molecule's delegated driver and https://builds.sr.ht.
+Automatic testing is provided using molecule's delegated driver and <https://builds.sr.ht>.
 
 ## Requirements
 
