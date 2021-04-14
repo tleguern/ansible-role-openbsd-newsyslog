@@ -36,7 +36,7 @@
           ont repoussées. Cette disposition de mon coeur m'étoit assez douce,
           elle m'aidoit à supporter le nouvel état que j'ai embrassé; mais
           depuis la mort de M. de Valorbe, je ne sais quelle inquiétude, quel
-          sentiment amer ne me permet plus d'être bien quand je suis seule. 
+          sentiment amer ne me permet plus d'être bien quand je suis seule.
     - name: Run newsyslog
       command: newsyslog
     - name: Verify if /tmp/garbage.0.gz exists
