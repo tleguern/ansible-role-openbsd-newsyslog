@@ -13,6 +13,6 @@
         count: 3
         size: 1
   tasks:
-    - name: "Include tleguern.newsyslog"
+    - name: "Include ansible-role-openbsd-newsyslog"
       include_role:
-        name: "tleguern.newsyslog"
+        name: "ansible-role-openbsd-newsyslog"
