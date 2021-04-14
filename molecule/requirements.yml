@@ -1,5 +1,5 @@
 ---
 roles:
-  - src: https://github.com/Aversiste/ansible-role-openbsd-newsyslog
-    name: aversiste.newsyslog
+  - src: https://github.com/tleguern/ansible-role-openbsd-newsyslog
+    name: tleguern.newsyslog
     version: master

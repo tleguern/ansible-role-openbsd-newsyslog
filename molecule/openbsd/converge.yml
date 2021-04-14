@@ -13,6 +13,6 @@
         count: 3
         size: 1
   tasks:
-    - name: "Include aversiste.newsyslog"
+    - name: "Include tleguern.newsyslog"
       include_role:
-        name: "aversiste.newsyslog"
+        name: "tleguern.newsyslog"

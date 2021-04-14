@@ -64,7 +64,7 @@ Overwriting existing newsyslog.conf:
       /var/cron/log root:wheel 600 7 300 * Z
       /var/www/logs/www.example.com.access.log root:daemon 644 4 * * Z "pkill -USR1 -u root -U root -x httpd"
   roles:
-    - role: aversiste.newsyslog
+    - role: tleguern.newsyslog
 ```
 
 Appending lines to a default configuration:
@@ -80,7 +80,7 @@ Appending lines to a default configuration:
         count: 4
         command: "pkill -USR1 -u root -U root -x httpd"
   roles:
-  - role: aversiste.newsyslog
+  - role: tleguern.newsyslog
 ```
 
 ## License
@@ -89,7 +89,7 @@ ISC
 
 ## Contributing
 
-Either send [send GitHub pull requests](https://github.com/Aversiste/ansible-role-openbsd-newsyslog) or [send patches on SourceHut](https://lists.sr.ht/~tleguern/misc).
+Either send [send GitHub pull requests](https://github.com/tleguern/ansible-role-openbsd-newsyslog) or [send patches on SourceHut](https://lists.sr.ht/~tleguern/misc).
 
 ## Author Information
 
